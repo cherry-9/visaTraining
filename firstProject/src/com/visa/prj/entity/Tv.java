@@ -19,6 +19,11 @@ public class Tv extends Product {
 	public void setConnectivity(String connectivity) {
 		this.connectivity = connectivity;
 	}
+
+	@Override
+	public boolean isExpensive() {
+		return true;
+	}
 	
 	
 }
