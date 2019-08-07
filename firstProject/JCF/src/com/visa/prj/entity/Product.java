@@ -1,12 +1,15 @@
 package com.visa.prj.entity;
 
+import com.visa.prj.annotations.Column;
+import com.visa.prj.annotations.Table;
 
+@Table (name="Products")
 public class Product implements Comparable<Product>{
 	private int id;
 	private String name;
 	private double price;
 	private String category;
-	private int count;
+	private static int count;
 	
 	public Product() {
 	}
@@ -16,10 +19,10 @@ public class Product implements Comparable<Product>{
 		this.name = name;
 		this.price = price;
 		this.category = category;
-		this.count = count;
+		Product.count = 4;
 	}
 
-	 
+	@Column(name="prd_id", type="NUMERIC(10)") 
 	public int getId() {
 		return id;
 	}
@@ -28,7 +31,7 @@ public class Product implements Comparable<Product>{
 		this.id = id;
 	}
 	
- 
+	@Column(name="prd_name")
 	public String getName() {
 		return name;
 	}
@@ -37,6 +40,7 @@ public class Product implements Comparable<Product>{
 		this.name = name;
 	}
 
+//	@Column(name="prd_price", type="DOUBLE(20)")
 	public double getPrice() {
 		return price;
 	}
@@ -44,7 +48,8 @@ public class Product implements Comparable<Product>{
 	public void setPrice(double price) {
 		this.price = price;
 	}
-
+	
+	@Column(name="prd_category")
 	public String getCategory() {
 		return category;
 	}
@@ -57,9 +62,6 @@ public class Product implements Comparable<Product>{
 		return count;
 	}
 
-	public void setCount(int count) {
-		this.count = count;
-	}
 
 	@Override
 	public int compareTo(Product o) {
