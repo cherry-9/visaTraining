@@ -1,4 +1,4 @@
-package com.visa.vending.impl;
+package com.visa.vending.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

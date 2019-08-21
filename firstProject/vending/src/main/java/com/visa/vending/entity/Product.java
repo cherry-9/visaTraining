@@ -24,16 +24,16 @@ public class Product {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public double getPrice() {
+	public synchronized double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public synchronized void setPrice(double price) {
 		this.price = price;
 	}
-	public int getQty() {
+	public synchronized int getQty() {
 		return qty;
 	}
-	public void setQty(int qty) {
+	public synchronized void setQty(int qty) {
 		this.qty = qty;
 	}
 	@Override

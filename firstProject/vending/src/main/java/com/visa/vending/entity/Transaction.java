@@ -1,6 +1,6 @@
 package com.visa.vending.entity;
 
-public class Transaction {
+public class Transaction extends Thread {
 	//private int transId;
 	private int productId;
 	private int qty;
